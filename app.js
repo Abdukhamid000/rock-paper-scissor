@@ -18,19 +18,21 @@ if (!localStorage.getItem("score")) {
 }
 
 game.addEventListener("click", (e) => {
-  const svg = e.target.cloneNode();
-  game.style.display = "none";
-  picked.style.display = "grid";
-  player.appendChild(svg);
+  if (e.target.tagName === "IMG") {
+    const svg = e.target.cloneNode();
+    game.style.display = "none";
+    picked.style.display = "grid";
+    player.appendChild(svg);
 
-  const svgs = [rock_svg, paper_svg, scissor_svg];
-  const random = Math.floor(Math.random() * 3);
-  setTimeout(() => {
-    cpu__bg.appendChild(svgs[random]);
-  }, 0);
+    const svgs = [rock_svg, paper_svg, scissor_svg];
+    const random = Math.floor(Math.random() * 3);
+    setTimeout(() => {
+      cpu__bg.appendChild(svgs[random]);
+    }, 0);
 
-  checkForLose(svg, svgs, random);
-  checkForWin(svg, svgs, random);
+    checkForLose(svg, svgs, random);
+    checkForWin(svg, svgs, random);
+  }
 });
 
 const confettiConfig = {
