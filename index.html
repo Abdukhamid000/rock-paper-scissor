@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock-paper</title>
+  </head>
+  <body>
+    <div class="container middle">
+      <div class="card">
+        <div class="card__title">
+          <ul>
+            <li>Rock</li>
+            <li>Paper</li>
+            <li>Scissors</li>
+          </ul>
+        </div>
+        <div class="card__score">
+          <span>SCORE</span>
+          <span id="score">0</span>
+        </div>
+      </div>
+      <div class="game" id="game">
+        <div class="game__paper center">
+          <img src="./images/Paper.svg" alt="" id="paper" />
+        </div>
+        <div class="game__scissor center">
+          <img src="./images/Scissors.svg" alt="" id="scissor" />
+        </div>
+        <div class="game__rock center">
+          <img src="./images/Rock.svg" alt="" id="rock" />
+        </div>
+      </div>
+
+      <div class="picked">
+        <div class="player">
+          <div class="player__bg"></div>
+        </div>
+        <div class="play-again middle">
+          <span id="win-text"></span>
+          <span id="lose-text"></span>
+          <span id="draw-text"></span>
+          <button class="btn_play_again">PLAY AGAIN</button>
+        </div>
+        <div class="cpu">
+          <div class="cpu__bg center">
+            <!-- <img src="./images/Paper.svg" alt="" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn">
+      <span>rules</span>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
