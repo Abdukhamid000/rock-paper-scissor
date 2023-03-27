@@ -10,6 +10,17 @@ const win = document.querySelector("#win-text");
 const lose = document.querySelector("#lose-text");
 const draw = document.querySelector("#draw-text");
 const score = document.querySelector("#score");
+const exit = document.querySelector("[data-exit]");
+
+function showModal() {
+  exit.classList.replace("hide", "show");
+}
+
+exit.addEventListener("click", (e) => {
+  if (e.target.id === "clear") {
+    exit.classList.replace("show", "hide");
+  }
+});
 
 if (!localStorage.getItem("score")) {
   localStorage.setItem("score", 0);
